@@ -99,10 +99,12 @@ main(int argc, char **argv)
 					"BQC : BBQcoin : b\n"
 					"BTC : Bitcoin : 1\n"
 					"TEST : Bitcoin Testnet : m or n\n"
+					"BTG : Bitcoin Gold : G\n"
 					"BTCD : Bitcoin Dark : R\n"
 					"CCC : Chococoin : 7\n"
 					"CCN : Cannacoin : C\n"
 					"CDN : Canadaecoin : C\n"
+					"CDY : Bitcoin Candy : C\n"
 					"CLAM : Clamcoin : x\n"
 					"CNC : Chinacoin : C\n"
 					"CNOTE : C-Note : C\n"
@@ -866,6 +868,22 @@ main(int argc, char **argv)
 				fprintf(stderr,
 					"Decrypting BTC Address\n");
 					addrtype_opt = 0;
+					privtype_opt = 128;
+					break;
+			}
+			else
+			if (strcmp(optarg, "BTG")== 0) {
+				fprintf(stderr,
+					"Decrypting BTG Address\n");
+					addrtype_opt = 38;
+					privtype_opt = 128;
+					break;
+			}
+			else
+			if (strcmp(optarg, "CDY")== 0) {
+				fprintf(stderr,
+					"Decrypting CDY Address\n");
+					addrtype_opt = 28;
 					privtype_opt = 128;
 					break;
 			}

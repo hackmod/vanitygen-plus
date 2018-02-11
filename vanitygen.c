@@ -425,9 +425,11 @@ main(int argc, char **argv)
 					"BTC : Bitcoin : 1\n"
 					"TEST : Bitcoin Testnet : m or n\n"
 					"BTCD : Bitcoin Dark : R\n"
+					"BTG : Bitcoin Gold : G\n"
 					"CCC : Chococoin : 7\n"
 					"CCN : Cannacoin : C\n"
 					"CDN : Canadaecoin : C\n"
+					"CDY : Bitcoin Candy : C\n"
 					"CLAM : Clamcoin : x\n"
 					"CNC : Chinacoin : C\n"
 					"CNOTE : C-Note : C\n"
@@ -1193,6 +1195,22 @@ main(int argc, char **argv)
 				fprintf(stderr,
 					"Generating BTC Address\n");
 					addrtype = 0;
+					privtype = 128;
+					break;
+			}
+			else
+			if (strcmp(optarg, "BTG")== 0) {
+				fprintf(stderr,
+					"Generating BTG Address\n");
+					addrtype = 38;
+					privtype = 128;
+					break;
+			}
+			else
+			if (strcmp(optarg, "CDY")== 0) {
+				fprintf(stderr,
+					"Generating CDY Address\n");
+					addrtype = 28;
 					privtype = 128;
 					break;
 			}
